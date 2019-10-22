@@ -1,0 +1,40 @@
+$screen-md-min: 768px;
+
+@mixin md {
+  @media (min-width: #{$screen-md-min}){
+    @content;
+  }
+}
+
+$colorTeste :'purple';
+$mainRed: #E92720;
+$mainWhite: #FAFCFD;
+$mainGrey: #E3E3E3;
+$mainBlack: #262626;
+
+body{
+  background-color: $mainWhite;
+}
+
+.card {
+  background-color: $mainGrey;
+  width: 90%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+  transition: 0.4s;
+  margin: 15px auto;
+
+  .container {
+    padding: 2px 16px;
+  }
+
+  @include md{
+    width: 70%;
+  }
+
+}
+
+.card:hover{
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.1);
+  cursor: pointer;
+}
+

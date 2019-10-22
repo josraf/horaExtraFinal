@@ -1,0 +1,1 @@
+body{background-color:#fafcfd}.card{background-color:#e3e3e3;width:90%;box-shadow:0 4px 8px 0 rgba(0,0,0,.1);transition:.4s;margin:15px auto}.card .container{padding:2px 16px}@media (min-width:768px){.card{width:70%}}.card:hover{box-shadow:0 8px 16px 0 rgba(0,0,0,.1);cursor:pointer}
