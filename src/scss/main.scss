@@ -1,3 +1,5 @@
+//Criar breakpoint acima de 768px
+
 $screen-md-min: 768px;
 
 @mixin md {
@@ -6,26 +8,48 @@ $screen-md-min: 768px;
   }
 }
 
-$colorTeste :'purple';
+//Lista de variaveis
 $mainRed: #E92720;
 $mainWhite: #FAFCFD;
 $mainGrey: #E3E3E3;
 $mainBlack: #262626;
+$fontSizeS: 12px;
+$fontSizeM: 14px;
 
 body{
   background-color: $mainWhite;
+  font-family: 'Montserrat';
 }
 
 .card {
   background-color: $mainGrey;
   width: 90%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
-  transition: 0.4s;
-  margin: 15px auto;
+  transition: 0.3s;
+  margin: 20px auto;
+  max-height: 300px;
 
   .container {
-    padding: 2px 16px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+
+    .left-half {
+      flex: 2;
+      padding: 1rem;
+    }
+
+    .right-half {
+      flex: 1;
+      padding: 1rem;
+
+      img{
+        float:right;
+        margin-right:30px;
+      }
+    }
   }
+
 
   @include md{
     width: 70%;
@@ -34,7 +58,61 @@ body{
 }
 
 .card:hover{
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.1);
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
   cursor: pointer;
 }
+
+.search-bar{
+  padding: 6px;
+  font-size: $fontSizeM;
+  margin: 0 auto;
+  border: solid $mainGrey 2px;
+}
+
+.box{
+  width:100%;
+  text-align: center;
+}
+
+.box{
+  .search-bar{
+    margin-top: 20px;
+  }
+}
+
+.row{
+  display:flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+.column{
+  max-width:100%;
+  flex:100%;
+  padding: 0 4px;
+
+
+  img {
+    margin-top: 8px;
+    margin-left: 8px;
+    vertical-align: middle;
+    width: 100%;
+  }
+
+  @include md{
+    flex: 45%;
+    max-width: 45%;
+  }
+}
+
+.country_images{
+  width:100%;
+  margin: 20px auto;
+
+  @include md{
+    width:70%;
+  }
+}
+
+
 
