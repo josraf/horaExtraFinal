@@ -83,36 +83,49 @@ body{
 .row{
   display:flex;
   flex-wrap: wrap;
-  padding: 0 4px;
 }
 
 .column{
-  max-width:100%;
   flex:100%;
   padding: 0 4px;
 
 
   img {
     margin-top: 8px;
-    margin-left: 8px;
     vertical-align: middle;
     width: 100%;
   }
 
   @include md{
-    flex: 45%;
-    max-width: 45%;
+    flex: 50%;
+    max-width: 50%;
   }
 }
 
 .country_images{
-  width:100%;
+  width:90%;
   margin: 20px auto;
 
   @include md{
     width:70%;
   }
 }
+
+h2.no-span {
+  display: table;
+  white-space: nowrap;
+  &:before, &:after {
+    border-top: 1px solid $mainGrey;
+    content: '';
+    display: table-cell;
+    position: relative;
+    top: 0.5em;
+    width: 45%;
+  }
+  &:before { right: 1.5%; }
+  &:after { left: 1.5%; }
+}
+
 
 
 

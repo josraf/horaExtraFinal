@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="df99d45c-88bc-44ef-94f1-7800dbce6859" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/CardBuilder.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/CountryPage.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/apiCalls.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/numberUtils.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CountryPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CountryPage.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/MainPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainPage.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/css/main.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/main.min.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scss/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/main.scss" afterDir="false" />
@@ -49,6 +41,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -83,6 +76,8 @@
       <workItem from="1571784420905" duration="2463000" />
       <workItem from="1571813288729" duration="10181000" />
       <workItem from="1571824617239" duration="1774000" />
+      <workItem from="1571844632344" duration="164000" />
+      <workItem from="1571845794186" duration="4494000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1571756634237</created>
