@@ -21,19 +21,20 @@ body{
   font-family: 'Montserrat';
 }
 
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .card {
   background-color: $mainGrey;
   width: 90%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
   transition: 0.3s;
   margin: 20px auto;
-  max-height: 300px;
 
   .container {
-    display:flex;
-    align-items: center;
-    justify-content: center;
-
     .left-half {
       flex: 2;
       padding: 1rem;
@@ -87,13 +88,12 @@ body{
 
 .column{
   flex:100%;
-  padding: 0 4px;
 
 
   img {
-    margin-top: 8px;
     vertical-align: middle;
     width: 100%;
+    opacity: 1;
   }
 
   @include md{
@@ -106,25 +106,128 @@ body{
   width:90%;
   margin: 20px auto;
 
-  @include md{
-    width:70%;
-  }
+
 }
 
 h2.no-span {
   display: table;
   white-space: nowrap;
+  max-width:100%;
+  margin:10px;
   &:before, &:after {
-    border-top: 1px solid $mainGrey;
+    border-top: 2px solid $mainBlack;
     content: '';
     display: table-cell;
     position: relative;
     top: 0.5em;
-    width: 45%;
+    width: 8%;
   }
-  &:before { right: 1.5%; }
-  &:after { left: 1.5%; }
+  &:before { right: 1.5%; width:10% }
+  &:after { left:1.5%; width:82% }
+  @include md{
+    &:before { right: 1%; width:10% }
+    &:after { left:1%; width:100% }
+  }
 }
+
+.content {
+  background-color: $mainGrey;
+  width: 90%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+  margin: 20px auto;
+
+  @include md{
+    width: 80%;
+  }
+
+}
+
+.images:hover{
+  cursor:pointer;
+  position:relative;
+  opacity: 0.9;
+}
+
+
+#myImg:hover {opacity: 0.7;}
+
+//MODAL
+
+.modal {
+  display: block;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  min-height: 100%;
+  overflow: auto;
+  overflow-y: initial !important;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.9);
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 90%;
+  max-width: 75vw;
+  overflow-y: auto;
+  pointer-events: initial;
+  @include md{
+    width: 100%
+  }
+}
+
+//#caption {
+//  margin: auto;
+//  display: block;
+//  width: 80%;
+//  max-width: 700px;
+//  text-align: center;
+//  color: #ccc;
+//  padding: 10px 0;
+//  height: 150px;
+//}
+//
+//.modal-content, #caption {
+//  -webkit-animation-name: zoom;
+//  -webkit-animation-duration: 0.6s;
+//  animation-name: zoom;
+//  animation-duration: 0.6s;
+//}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)}
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)}
+  to {transform:scale(1)}
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+//CLOSE MODAL
+
 
 
 

@@ -32,7 +32,7 @@ export function getImagesByCountry(countryName) {
     }).then( (response) => {
         let imgsUrl = [];
         response.data.results.map((data) => {
-            imgsUrl.push(data.urls.regular);
+            return imgsUrl.push(data.urls.regular);
         });
         return imgsUrl;
     });
