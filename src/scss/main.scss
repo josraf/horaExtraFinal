@@ -102,11 +102,9 @@ body{
   }
 }
 
-.country_images{
+.country_info{
   width:90%;
   margin: 20px auto;
-
-
 }
 
 h2.no-span {
@@ -158,7 +156,7 @@ h2.no-span {
   display: block;
   position: fixed;
   z-index: 1;
-  padding-top: 100px;
+  padding-top: 25px;
   left: 0;
   top: 0;
   width: 100%;
@@ -173,11 +171,12 @@ h2.no-span {
   margin: auto;
   display: block;
   width: 90%;
-  max-width: 75vw;
+  max-width: 80vw;
   overflow-y: auto;
   pointer-events: initial;
   @include md{
-    width: 100%
+    width: auto;
+    height: 90vh;
   }
 }
 
