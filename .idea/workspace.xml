@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="df99d45c-88bc-44ef-94f1-7800dbce6859" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/GoogleMaps.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/CountryPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CountryPage.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/css/main.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/main.min.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scss/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/main.scss" afterDir="false" />
@@ -77,6 +80,7 @@
       <workItem from="1571824617239" duration="1774000" />
       <workItem from="1571844632344" duration="164000" />
       <workItem from="1571845794186" duration="4494000" />
+      <workItem from="1571922154548" duration="4482000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1571756634237</created>
@@ -92,7 +96,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571756642943</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="commit images fixed">
+      <created>1571917387033</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1571917387033</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -113,6 +124,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="first commit" />
+    <MESSAGE value="commit images fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit images fixed" />
   </component>
 </project>

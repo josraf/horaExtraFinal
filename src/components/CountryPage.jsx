@@ -9,15 +9,19 @@ function CountryPage(props){
     const [arrayImages, setArrayImages] = useState([]);
     const [portalOpen, setPortalOpen] = useState(false);
     const [portalImage, setPortalImage] = useState('');
-    const [countryName, setCountryName] = useState('');
+    const [countryData, setCountryData] = useState([]);
 
     useEffect(() => {
         fetchApi();
     }, []);
 
+    useEffect(() => {
+        console.log(countryData);
+    });
+
     const fetchApi = async() => {
         await getByCountryName(props.match.params.name).then(response => {
-            setCountryName(response.data[0].name);
+            setCountryData(response.data[0]);
         }).then(async () => {
             await getImagesByCountry(props.match.params.name).then(response => {
                 setArrayImages(response);
@@ -39,15 +43,25 @@ function CountryPage(props){
 
     return(
         <div>
-            {countryName !== '' &&
+            {countryData.length !== 0 &&
             <div className='content'>
                 <div className='container'>
-                    <div className='country_nfo'>
-                        <h2 className="no-span">About {countryName}</h2>
+                    <div className='country_information'>
+                        <h2 className="no-span">About {countryData.name}</h2>
+                        <h4>Capital: <span className='sub-font'> {countryData.capital} </span> </h4>
+                        <h4>Also know as: {countryData.altSpellings.map((data, index) => {
+                            if(index === countryData.altSpellings.length -1){
+                                return <span className='sub-font' >{data}</span>
+                            }
+                            else {
+                                return <span className='sub-font' >{data}, </span>
+                            }
+                        })}</h4>
+                        <h4>Sub-region: <span className='sub-font'>{countryData.subregion}</span></h4>
                     </div>
                 </div>
                 <div className='container'>
-                    <div className='country_info'>
+                    <div className='country_images'>
                         <h2 className="no-span">Images</h2>
                         <div className='row'>
                             <div className='column'>

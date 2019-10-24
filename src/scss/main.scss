@@ -102,7 +102,12 @@ body{
   }
 }
 
-.country_info{
+.country_images{
+  width:90%;
+  margin: 20px auto;
+}
+
+.country_information{
   width:90%;
   margin: 20px auto;
 }
@@ -227,7 +232,23 @@ h2.no-span {
 
 //CLOSE MODAL
 
+.sub-font{
+  font-size: $fontSizeM;
+  color: $mainBlack;
+}
 
+
+.country_information h4{
+  color: $mainRed;
+}
+
+
+//GOOGLE
+
+.google-content{
+  width: 400px;
+  height: 300px;
+}
 
 
 
