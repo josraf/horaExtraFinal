@@ -1,5 +1,16 @@
 Demonstração desenvolvida para Guia do Automóvel
 
+## Execução do projeto
+
+no terminal
+#### `npm start` 
+##### ou
+#### `npm run build`
+#### `npm install -g serve`
+#### `serve -s build`
+##### ou 
+
+
 ## Tecnologias utilizadas
 
 ### `React 16.10.2`
