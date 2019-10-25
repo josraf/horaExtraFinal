@@ -27,7 +27,7 @@ function CountryPage(props){
                 setArrayImages(response);
             })
         }).catch(() => {
-            props.history.push('/');
+            pushHomepage()
         })
     };
 
@@ -40,24 +40,47 @@ function CountryPage(props){
         openPortal();
     };
 
+    const pushHomepage = () => {
+        props.history.push('/');
+    };
+
+    const imgSrc = `https://www.countryflags.io/${countryData.alpha2Code}/flat/64.png`;
+
+
 
     return(
         <div>
+            <div className='back-homepage'>
+                <button className='btn-sort' onClick={pushHomepage}>Back to homepage</button>
+
+            </div>
             {countryData.length !== 0 &&
             <div className='content'>
                 <div className='container'>
                     <div className='country_information'>
-                        <h2 className="no-span">About {countryData.name}</h2>
-                        <h4>Capital: <span className='sub-font'> {countryData.capital} </span> </h4>
-                        <h4>Also know as: {countryData.altSpellings.map((data, index) => {
-                            if(index === countryData.altSpellings.length -1){
-                                return <span className='sub-font' >{data}</span>
-                            }
-                            else {
-                                return <span className='sub-font' >{data}, </span>
-                            }
-                        })}</h4>
-                        <h4>Sub-region: <span className='sub-font'>{countryData.subregion}</span></h4>
+                        <h2 className="no-span">About {countryData.name} </h2>
+                        <div className='content-reverse'>
+                            <div className='left-half'>
+                                <img alt='' src={imgSrc}/>
+                            </div>
+                            <div className='right-half'>
+                                <h4>Capital: <span className='sub-font'> {countryData.capital} </span> </h4>
+                                <h4>Population: <span className='sub-font'> {countryData.population} </span> </h4>
+                                <h4>People known as: <span className='sub-font'> {countryData.demonym} </span> </h4>
+
+                                <h4>Also know as: {countryData.altSpellings.map((data, index) => {
+                                    if(index === countryData.altSpellings.length -1){
+                                        return <span className='sub-font' >{data}</span>
+                                    }
+                                    else {
+                                        return <span className='sub-font' >{data}, </span>
+                                    }
+                                })}</h4>
+                                <h4>Region: <span className='sub-font'>{countryData.region}</span></h4>
+                                <h4>Sub-region: <span className='sub-font'>{countryData.subregion}</span></h4>
+                                <h4>Timezone: <span className='sub-font'>{countryData.timezones[0]}</span></h4>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div className='container'>
@@ -70,7 +93,7 @@ function CountryPage(props){
                                         return <img className='images' key={index} onClick={() => {
                                             handleImage(data)
                                         }} alt='' src={data}/>
-                                    }
+                                    } else return null;
                                 })}
                             </div>
                             <div className='column'>
@@ -79,7 +102,7 @@ function CountryPage(props){
                                         return <img className='images' key={index} onClick={() => {
                                             handleImage(data)
                                         }} alt='' src={data}/>
-                                    }
+                                    } else return null;
                                 })}
                             </div>
                         </div>

@@ -66,20 +66,53 @@ body{
 .search-bar{
   padding: 6px;
   font-size: $fontSizeM;
-  margin: 0 auto;
+  margin: 0 10px 0 auto;
   border: solid $mainGrey 2px;
-}
-
-.box{
-  width:100%;
-  text-align: center;
-}
-
-.box{
-  .search-bar{
-    margin-top: 20px;
+  @include md{
+    flex:1;
   }
 }
+
+.sort-by{
+  font-size: $fontSizeM;
+  margin: 10px auto 0;
+  align-items: start;
+  justify-content: start;
+  @include md{
+    flex:1;
+    margin-top: 0;
+  }
+}
+
+
+.btn-sort{
+  padding: 6px;
+  color: $mainBlack;
+  cursor: pointer;
+  border: solid $mainGrey 2px;
+  background-color: $mainWhite;
+}
+
+
+.btn-picked{
+  padding: 6px;
+  color: $mainWhite;
+  border: solid $mainGrey 2px;
+  background-color: $mainRed;
+}
+
+.box{
+  width:90%;
+  margin: 20px auto;
+  display:block;
+  align-items: start;
+
+  @include  md{
+    width: 70%;
+    display: flex;
+  }
+}
+
 
 .row{
   display:flex;
@@ -102,9 +135,9 @@ body{
   }
 }
 
-.country_images{
-  width:90%;
-  margin: 20px auto;
+.country_images {
+  width: 90%;
+  margin: 0 auto 20px;
 }
 
 .country_information{
@@ -185,34 +218,6 @@ h2.no-span {
   }
 }
 
-//#caption {
-//  margin: auto;
-//  display: block;
-//  width: 80%;
-//  max-width: 700px;
-//  text-align: center;
-//  color: #ccc;
-//  padding: 10px 0;
-//  height: 150px;
-//}
-//
-//.modal-content, #caption {
-//  -webkit-animation-name: zoom;
-//  -webkit-animation-duration: 0.6s;
-//  animation-name: zoom;
-//  animation-duration: 0.6s;
-//}
-
-@-webkit-keyframes zoom {
-  from {-webkit-transform:scale(0)}
-  to {-webkit-transform:scale(1)}
-}
-
-@keyframes zoom {
-  from {transform:scale(0)}
-  to {transform:scale(1)}
-}
-
 .close {
   position: absolute;
   top: 15px;
@@ -242,12 +247,49 @@ h2.no-span {
   color: $mainRed;
 }
 
+.image-flag{
+  justify-self: center;
+}
 
-//GOOGLE
+.content-reverse {
+  .left-half {
+    padding: 1rem;
+    text-align: center;
 
-.google-content{
-  width: 400px;
-  height: 300px;
+    img {
+      width: 30%;
+      height: auto;
+    }
+  }
+
+  .right-half {
+    padding: 1rem;
+
+  }
+
+  @include md {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    .left-half {
+      flex: 1;
+      img{
+        width:60%;
+      }
+    }
+    .right-half {
+      flex: 4;
+    }
+  }
+}
+
+.back-homepage{
+  width:90%;
+  margin: 20px auto;
+  @include md {
+    width: 80%
+  }
 }
 
 

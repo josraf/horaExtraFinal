@@ -1,68 +1,49 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Demonstração desenvolvida para Guia do Automóvel
 
-## Available Scripts
+## Tecnologias utilizadas
 
-In the project directory, you can run:
+### `React 16.10.2`
+Packages principais utilizados em react:
 
-### `npm start`
+#### `npm i react-router-dom`
+#### `npm i axios`
+#### `npm i array-sort`
+#### `npm i gulp gulp-clean-css gulp-rename gulp-sass`
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Necessidade de cada tecnologias
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+### react-router-dom
 
-### `npm test`
+##### - Principal utilização para distinção de rotas na aplicação e definição dos componentes dependo da rota do url
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### axios
 
-### `npm run build`
+##### - Pedidos à API utilizada e gestão dos mesmo (substituindo o 'fetch')
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### array-sort
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+##### - Ordenar o array dos dados provenientes da API consoante a necessidade de pesquisa (sort)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### gulp
 
-### `npm run eject`
+##### - Compilar Sass para css em real time
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Melhorias 
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+######ps: críticas  ao que poderia ser feito na aplicação caso fosse um projeto a dar seguimento e não só uma demonstração
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### CSS
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+##### - Melhorar a interação com as janelas modais em dispositivos móveis (dificuldade na visualização das imagens nestes dispositivos);
 
-## Learn More
+##### - Repensar escolha de cores;
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+##### - Melhorar aspetos visuais gerais;
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Gerais
 
-### Code Splitting
+##### - Pensando na escalabilidade da aplicação uma melhoria a apontar seria a utilização de uma storage (redux) de forma a evitar tantas chamadas à API;
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+##### - Realização de uma paginação de forma a evitar o scrolling tão extenso;
 
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+##### - Aprovar a usabilidade de aplicação com utilizadores desejáveis (público alvo);
