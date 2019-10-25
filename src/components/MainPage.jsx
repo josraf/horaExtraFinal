@@ -31,10 +31,6 @@ function MainPage(){
         }
     }, [sortBy]);
 
-    useEffect(() => {
-        console.log(cardsData);
-    });
-
     const fetchApiData = async (country) => {
         let reverse = true;
         if(sortBy === 'name') reverse = false;

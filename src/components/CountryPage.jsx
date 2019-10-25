@@ -15,10 +15,6 @@ function CountryPage(props){
         fetchApi();
     }, []);
 
-    useEffect(() => {
-        console.log(countryData);
-    });
-
     const fetchApi = async() => {
         await getByCountryName(props.match.params.name).then(response => {
             setCountryData(response.data[0]);
